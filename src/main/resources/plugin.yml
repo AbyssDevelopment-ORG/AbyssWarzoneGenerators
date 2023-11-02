@@ -1,0 +1,10 @@
+name: AbyssWarzoneGenerators
+version: '1.0.0'
+main: org.abyssdev.abysswarzonegenerators.AbyssWarzoneGenerators
+api-version: 1.13
+depend:
+    - AbyssLib
+authors:
+    - Relocation
+description: Warzone generators plugin
+website: https://abyssdev.org

@@ -1,0 +1,30 @@
+warzone-generators:
+    "example":
+        spawn-interval: 30
+        hologram:
+            y-increase: 2.5
+            lines:
+                - "&4&m---------------------------------"
+                - " "
+                - "&c&lWar&4&lChild &8&l| &c&lGenerator"
+                - " "
+                - "&4&l→ &cItem Drop: &fSpecial Brick"
+                - "&4&l→ &cTime left: &f%time%"
+                - " "
+                - "&4&m---------------------------------"
+        locations:
+            - "world;100.5;100;100.5" #WORLD, X, Y, Z
+        items:
+            - "special-brick;100" #ITEM, CHANCE
+
+items:
+    "special-brick":
+        enchanted: true
+        material: "BRICK"
+        name: "&c&lWarChild &4&lBrick"
+        lore:
+            - "&7&o(( Donate to the warchild charity @ &f&ohttps://warchild.com&7&o! ))"
+        nbt:
+            enabled: false
+            key: "WARCHILD_BRICK"
+            value: "100" #Takes a string value, for numbers just parse it.
