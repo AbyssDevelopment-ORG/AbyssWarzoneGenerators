@@ -20,6 +20,11 @@ public final class AbyssWarzoneGenerators extends AbyssPlugin {
     private final AbyssConfig config = this.getAbyssConfig("config");
 
     private final Registry<String, GeneratorItem> itemRegistry = new GeneratorItemRegistry(this);
-    private final Registry<String, Generator> generatorRegistry = new GeneratorRegistry(this);
+    private Registry<String, Generator> generatorRegistry;
+
+    @Override
+    public void onEnable() {
+        this.generatorRegistry = new GeneratorRegistry(this);
+    }
 
 }
