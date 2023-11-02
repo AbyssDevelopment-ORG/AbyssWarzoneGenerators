@@ -49,11 +49,11 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
 
         this.type = key;
 
-        this.lines = plugin.getConfig().getColoredStringList("generators." + key + ".holograms.lines");
-        this.interval = plugin.getConfig().getInt("generators." + key + ".spawn-interval");
+        this.lines = plugin.getConfig().getColoredStringList("warzone-generators." + key + ".holograms.lines");
+        this.interval = plugin.getConfig().getInt("warzone-generators." + key + ".spawn-interval");
         this.seconds = this.interval;
 
-        for (final String item : plugin.getConfig().getStringList("generators." + key + ".items")) {
+        for (final String item : plugin.getConfig().getStringList("warzone-generators." + key + ".items")) {
             final String[] data = item.split(";");
 
             final Optional<GeneratorItem> itemOpt = plugin.getItemRegistry().get(data[0]);
@@ -65,7 +65,7 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
             this.items.put(itemOpt.get(), Double.parseDouble(data[1]));
         }
 
-        for (final String loc : plugin.getConfig().getSectionKeys("generators." + key + ".locations")) {
+        for (final String loc : plugin.getConfig().getSectionKeys("warzone-generators." + key + ".locations")) {
             final Location location = LocationSerializer.deserialize(loc);
 
             if (location.getWorld() == null) {
