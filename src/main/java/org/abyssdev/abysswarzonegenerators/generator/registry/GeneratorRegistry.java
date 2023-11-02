@@ -23,7 +23,7 @@ public final class GeneratorRegistry implements Registry<String, Generator> {
      * @param plugin The abyss warzone generators plugin
      */
     public GeneratorRegistry(final AbyssWarzoneGenerators plugin) {
-        for (final String key : plugin.getConfig().getSectionKeys("generators")) {
+        for (final String key : plugin.getConfig().getSectionKeys("warzone-generators")) {
             this.generators.put(key, new AbyssGenerator(plugin, key));
         }
     }
