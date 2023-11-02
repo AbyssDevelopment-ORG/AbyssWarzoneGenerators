@@ -65,7 +65,7 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
             this.items.put(itemOpt.get(), Double.parseDouble(data[1]));
         }
 
-        for (final String loc : plugin.getConfig().getSectionKeys("warzone-generators." + key + ".locations")) {
+        for (final String loc : plugin.getConfig().getStringList("warzone-generators." + key + ".locations")) {
             final Location location = LocationSerializer.deserialize(loc);
 
             if (location.getWorld() == null) {
