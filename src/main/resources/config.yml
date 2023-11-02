@@ -5,12 +5,12 @@ warzone-generators:
             y-increase: 2.5
             lines:
                 - "&4&m---------------------------------"
-                - " "
+                - ""
                 - "&c&lWar&4&lChild &8&l| &c&lGenerator"
-                - " "
+                - ""
                 - "&4&l→ &cItem Drop: &fSpecial Brick"
                 - "&4&l→ &cTime left: &f%time%"
-                - " "
+                - ""
                 - "&4&m---------------------------------"
         locations:
             - "world;100.5;100;100.5" #WORLD, X, Y, Z

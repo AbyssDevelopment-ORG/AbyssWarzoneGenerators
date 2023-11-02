@@ -3,7 +3,6 @@ package org.abyssdev.abysswarzonegenerators.generator.item.impl;
 import lombok.Getter;
 import net.abyssdev.abysslib.config.AbyssConfig;
 import net.abyssdev.redempt.crunch.data.Pair;
-import org.abyssdev.abysswarzonegenerators.AbyssWarzoneGenerators;
 import org.abyssdev.abysswarzonegenerators.generator.item.GeneratorItem;
 import org.bukkit.inventory.ItemStack;
 

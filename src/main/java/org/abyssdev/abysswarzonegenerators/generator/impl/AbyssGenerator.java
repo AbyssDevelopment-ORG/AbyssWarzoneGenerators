@@ -12,7 +12,6 @@ import net.abyssdev.abysslib.utils.Utils;
 import org.abyssdev.abysswarzonegenerators.AbyssWarzoneGenerators;
 import org.abyssdev.abysswarzonegenerators.generator.Generator;
 import org.abyssdev.abysswarzonegenerators.generator.item.GeneratorItem;
-import org.abyssdev.abysswarzonegenerators.generator.item.impl.AbyssGeneratorItem;
 import org.bukkit.Location;
 import org.eclipse.collections.api.factory.Lists;
 
@@ -49,7 +48,7 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
 
         this.type = key;
 
-        this.lines = plugin.getConfig().getColoredStringList("warzone-generators." + key + ".holograms.lines");
+        this.lines = plugin.getConfig().getColoredStringList("warzone-generators." + key + ".hologram.lines");
         this.interval = plugin.getConfig().getInt("warzone-generators." + key + ".spawn-interval");
         this.seconds = this.interval;
 
