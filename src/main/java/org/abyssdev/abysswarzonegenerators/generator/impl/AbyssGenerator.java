@@ -71,7 +71,7 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
                 continue;
             }
 
-            this.locations.add(location);
+            this.locations.add(location.add(0.5, 0, 0.5));
         }
 
         for (final Location location : this.locations) {
@@ -117,7 +117,7 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
             int index = 0;
 
             for (final String line : this.lines) {
-                hologram.setLineAt(index++, new OptimalTextLine((OptimalHologram) hologram, line.replace("%time%", Utils.getTimeFormat(this.seconds * 1000L))));
+                ((OptimalTextLine) hologram.getLineAt(index)).setText(line.replace("%time%", Utils.getTimeFormat(this.seconds * 1000L)));
             }
         }
     }
