@@ -80,6 +80,8 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
             for (final String line : this.lines) {
                 hologram.appendTextLine(line.replace("%time%", Utils.getTimeFormat(this.seconds * 1000L)));
             }
+
+            this.holograms.add(hologram);
         }
     }
 
@@ -87,12 +89,11 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
     public void run() {
         this.seconds--;
 
+        this.update();
+
         if (this.seconds <= 0) {
             this.spawn();
-            return;
         }
-
-        this.update();
     }
 
     @Override
@@ -117,7 +118,17 @@ public final class AbyssGenerator extends AbyssTask<AbyssWarzoneGenerators> impl
             int index = 0;
 
             for (final String line : this.lines) {
+                if (index >= this.lines.size()) {
+                    break;
+                }
+
+                if (!line.contains("%time%")) {
+                    index++;
+                    continue;
+                }
+
                 ((OptimalTextLine) hologram.getLineAt(index)).setText(line.replace("%time%", Utils.getTimeFormat(this.seconds * 1000L)));
+                index++;
             }
         }
     }
