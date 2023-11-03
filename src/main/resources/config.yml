@@ -13,7 +13,7 @@ warzone-generators:
                 - ""
                 - "&4&m---------------------------------"
         locations:
-            - "world;100.5;100;100.5" #WORLD, X, Y, Z
+            - "world;100;100;100" #WORLD, X, Y, Z
         items:
             - "special-brick;100" #ITEM, CHANCE
 
